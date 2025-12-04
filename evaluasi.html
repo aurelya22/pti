@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluasi Kelompok PTI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script> 
+    <script src="script.js" defer></script> 
 </head>
 <body>
 
@@ -15,17 +15,22 @@
         <h2 class="title-evaluation">📝 Evaluasi Proyek Aplikasi Streaming</h2>
         <p class="description">Proyek ini dibuat untuk memenuhi tugas mata kuliah Pengantar Teknologi Informasi (PTI).</p>
 
-        <button class="open-popup-button" onclick="openPopup()">Lihat Detail Evaluasi & Anggota Kelompok</button>
-        
+    <button onclick="openPopup('anggota')">Tampilkan Anggota Kelompok</button>
+    <button onclick="openPopup('kesan_pesan')">Kesan dan Pesan</button>
     </div>
 
     <div class="popup-overlay" id="evaluation-popup">
-        <div class="popup-card">
-            <button class="close-popup-button" onclick="closePopup()">&times;</button>
-            
-            <h3>Nama Anggota Kelompok:</h3>
-            </div>
-    </div>
+        <div class="popup-card"> 
+            <button onclick="closePopup()">×</button>
+       
+    <h3 id="judul-anggota">Nama Anggota Kelompok:</h3>
+    <ul id="anggota-list"></ul>
+
+    <h3 id="judul-pesan">Pesan dan Kesan Evaluasi:</h3>
+    <textarea id="pesan-kesan" rows="4" cols="40" placeholder="Tulis pesan dan kesanmu di sini..."></textarea>
+    <div id="hasil-pesan" class="hasil-pesan"></div>
+</div>
+ </div>
 
 </body>
 </html>

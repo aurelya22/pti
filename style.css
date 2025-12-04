@@ -275,6 +275,22 @@ h1 {
     transform: scale(1);
 }
 
+.popup-card > button { /* Ini menargetkan tombol 'x' di dalam popup-card */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff1493;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.popup-card > button:hover {
+    color: #ff69b4;
+}
+
 .popup-card h3 {
     color: #ff1493;
     border-bottom: 1px dashed #444;
@@ -287,22 +303,6 @@ h1 {
     margin-left: 20px;
     color: #ccc;
     line-height: 1.6;
-}
-
-.close-popup-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: #ff1493;
-    font-size: 2em;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.close-popup-button:hover {
-    color: #ff69b4;
 }
 
 @media (max-width: 768px) {
@@ -342,4 +342,28 @@ h1 {
     .popup-card {
         padding: 25px;
     }
+}
+
+textarea#pesan-kesan {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.hasil-pesan {
+    margin-top: 10px;
+    padding: 15px; /* Perbesar padding agar lebih menonjol */
+    background-color: #2c2c2c; /* Latar belakang gelap */
+    border-radius: 6px;
+    font-style: italic;
+    color: #f0f0f0; /* Teks terang */
+    border: 1px solid #ff1493; /* Border neon untuk menonjolkan */
+}
+/* Tambahan styling untuk teks Kesan/Pesan di dalamnya */
+.hasil-pesan strong {
+    color: #ff1493; /* Menyorot kata 'Kesan' dan 'Pesan' dengan warna neon */
 }
