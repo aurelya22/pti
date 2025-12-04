@@ -1,0 +1,345 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #111111;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ff1493;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    color: #ff1493;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.button {
+    background-color: #ff1493;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ff69b4;
+}
+
+#login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+#login-container h2 {
+    color: #ff1493;
+}
+
+#login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+}
+
+#login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #ff1493;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#login-container button:hover {
+    background-color: #ff69b4;
+}
+
+.error-message {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+#movie-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.movie-card {
+    background: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    width: 200px;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 20, 147, 0.6);
+}
+
+.movie-cover {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+}
+
+.movie-card h4 {
+    padding: 0 10px;
+    margin: 10px 0 5px;
+    color: #ff1493;
+}
+.movie-card p {
+    padding: 0 10px 15px;
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+    flex-grow: 1; /* Memastikan p mengisi ruang agar card tingginya sama */
+}
+
+.evaluation-card {
+    background-color: #ff1493;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.evaluation-card:hover {
+    background-color: #ff69b4;
+}
+
+.evaluation-content h2 {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+#detail-page-container {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#detail-page-container h2 {
+    color: #ff1493;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.detail-content-wrapper { 
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.movie-info-section {
+    flex: 1;
+    min-width: 100px; 
+}
+
+.movie-poster-section {
+    flex: 1;
+    min-width: 200px; 
+    text-align: right;
+}
+
+.movie-detail-poster {
+    width: 100%;
+    max-width: 300px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+
+.movie-info {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
+.movie-info h3 {
+    color: #ff1493;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+}
+
+#evaluation-page-container {
+    padding: 40px 5%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+#evaluation-page-container h2 {
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.open-popup-button {
+    background-color: #ff1493;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.open-popup-button:hover {
+    background-color: #ff69b4;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    z-index: 2000;
+}
+
+.popup-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-card {
+    background: #1c1c1c;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(255, 20, 147, 0.7);
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-overlay.active .popup-card {
+    transform: scale(1);
+}
+
+.popup-card h3 {
+    color: #ff1493;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.popup-card ul, .popup-card ol, .popup-card p {
+    text-align: left;
+    margin-left: 20px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.close-popup-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff1493;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-popup-button:hover {
+    color: #ff69b4;
+}
+
+@media (max-width: 768px) {
+    #movie-list-container {
+        gap: 20px;
+        padding: 20px;
+    }
+    .movie-card {
+        width: 45%; 
+    }
+    .detail-content-wrapper {
+        flex-direction: column; /* Stack vertikal */
+    }
+    .movie-poster-section {
+        text-align: center; 
+        order: -1; /* Pindah poster ke atas pada mobile */
+    }
+    .movie-detail-poster {
+        margin: 0 auto 20px auto; 
+    }
+    #detail-page-container, #evaluation-page-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .movie-card {
+        width: 90%; /* Satu kolom */
+    }
+    #login-container {
+        margin: 50px auto;
+        padding: 25px;
+    }
+    .popup-card {
+        padding: 25px;
+    }
+}
