@@ -44,7 +44,7 @@ h1 {
     max-width: 400px;
     margin: 100px auto;
     padding: 40px;
-    background: #1c1c1c;
+    background: #d3087f;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
     text-align: center;
@@ -130,7 +130,7 @@ h1 {
     margin: 0;
     font-size: 0.9em;
     color: #ccc;
-    flex-grow: 1; /* Memastikan p mengisi ruang agar card tingginya sama */
+    flex-grow: 1; 
 }
 
 .evaluation-card {
@@ -275,7 +275,7 @@ h1 {
     transform: scale(1);
 }
 
-.popup-card > button { /* Ini menargetkan tombol 'x' di dalam popup-card */
+.popup-card > button { 
     position: absolute;
     top: 15px;
     right: 15px;
@@ -314,11 +314,11 @@ h1 {
         width: 45%; 
     }
     .detail-content-wrapper {
-        flex-direction: column; /* Stack vertikal */
+        flex-direction: column; 
     }
     .movie-poster-section {
         text-align: center; 
-        order: -1; /* Pindah poster ke atas pada mobile */
+        order: -1; 
     }
     .movie-detail-poster {
         margin: 0 auto 20px auto; 
@@ -333,7 +333,7 @@ h1 {
         font-size: 1.5em;
     }
     .movie-card {
-        width: 90%; /* Satu kolom */
+        width: 90%; 
     }
     #login-container {
         margin: 50px auto;
@@ -356,14 +356,14 @@ textarea#pesan-kesan {
 
 .hasil-pesan {
     margin-top: 10px;
-    padding: 15px; /* Perbesar padding agar lebih menonjol */
-    background-color: #2c2c2c; /* Latar belakang gelap */
+    padding: 15px; 
+    background-color: #2c2c2c; 
     border-radius: 6px;
     font-style: italic;
-    color: #f0f0f0; /* Teks terang */
-    border: 1px solid #ff1493; /* Border neon untuk menonjolkan */
+    color: #f0f0f0; 
+    border: 1px solid #ff1493; 
 }
-/* Tambahan styling untuk teks Kesan/Pesan di dalamnya */
+
 .hasil-pesan strong {
-    color: #ff1493; /* Menyorot kata 'Kesan' dan 'Pesan' dengan warna neon */
+    color: #ff1493; 
 }
